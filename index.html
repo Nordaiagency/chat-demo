@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cæsar Flytteservice Chatbot</title>
+</head>
+<body>
+
+<script type="module">
+import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
+
+Chatbot.init({
+  chatflowid: "00543cc3-fcd9-4617-9457-f2694f302d46",
+  apiHost: "http://178.104.51.5:3000",
+  chatflowConfig: {},
+  observersConfig: {},
+
+  theme: {
+    button: {
+      backgroundColor: "#d97745",
+      right: 20,
+      bottom: 20,
+      size: 48,
+      dragAndDrop: true,
+      iconColor: "white",
+      customIconSrc: "https://i.imgur.com/j84pYfN.png",
+      autoWindowOpen: {
+        autoOpen: true,
+        openDelay: 2,
+        autoOpenOnMobile: false
+      }
+    },
+
+    tooltip: {
+      showTooltip: true,
+      tooltipMessage: "Hej 👋",
+      tooltipBackgroundColor: "black",
+      tooltipTextColor: "white",
+      tooltipFontSize: 16
+    },
+
+    disclaimer: {
+      title: "Bemærk",
+      message: "Ved at bruge chatbotten accepterer du vilkårene.",
+      textColor: "black",
+      buttonColor: "#d97745",
+      buttonText: "Start chat",
+      buttonTextColor: "white",
+      blurredBackgroundColor: "rgba(0, 0, 0, 0.4)",
+      backgroundColor: "white"
+    },
+
+    customCSS: ``,
+
+    chatWindow: {
+      showTitle: true,
+      showAgentMessages: true,
+      title: "Cæsar Flytteservice",
+      titleAvatarSrc: "https://i.imgur.com/j84pYfN.png",
+      welcomeMessage: "Hej 👋 Hvordan kan jeg hjælpe dig med din flytning?",
+      errorMessage: "Der opstod en fejl. Prøv igen om et øjeblik.",
+      backgroundColor: "#ffffff",
+      backgroundImage: "",
+      height: 700,
+      width: 400,
+      fontSize: 16,
+
+      starterPrompts: [
+        "Hvad koster 2 mænd og 1 varevogn?",
+        "Har I opbevaring?",
+        "Jeg vil gerne have et tilbud"
+      ],
+
+      starterPromptFontSize: 15,
+      clearChatOnReload: false,
+      sourceDocsTitle: "Kilder:",
+      renderHTML: true,
+
+      botMessage: {
+        backgroundColor: "#f7f8ff",
+        textColor: "#303235",
+        showAvatar: true,
+        avatarSrc: "https://i.imgur.com/j84pYfN.png"
+      },
+
+      userMessage: {
+        backgroundColor: "#d97745",
+        textColor: "#ffffff",
+        showAvatar: true,
+        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png"
+      },
+
+      textInput: {
+        placeholder: "Skriv dit spørgsmål...",
+        backgroundColor: "#ffffff",
+        textColor: "#303235",
+        sendButtonColor: "#d97745",
+        maxChars: 200,
+        maxCharsWarningMessage: "Din besked er for lang. Skriv lidt kortere.",
+        autoFocus: true,
+        sendMessageSound: true,
+        sendSoundLocation: "send_message.mp3",
+        receiveMessageSound: true,
+        receiveSoundLocation: "receive_message.mp3"
+      },
+
+      feedback: {
+        color: "#303235"
+      },
+
+      dateTimeToggle: {
+        date: true,
+        time: true
+      },
+
+      footer: {
+        textColor: "#303235",
+        text: "Built by",
+        company: "NordAI Agency",
+        companyLink: "https://nordaiagency.dk/"
+      }
+    }
+  }
+});
+</script>
+
+</body>
+</html>
