@@ -3,115 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cæsar Flytteservice Chatbot</title>
+  <title>Effecto Chatbot</title>
 </head>
-<body>
+
+<body style="margin:0; background:#ffffff;">
 
 <script type="module">
 import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
 
 Chatbot.init({
-  chatflowid: "00543cc3-fcd9-4617-9457-f2694f302d46",
-  
-  chatflowConfig: {},
-  observersConfig: {},
-apiHost: "https://chatbot.nordaiagency.dk",
+  chatflowid: "5bba83ca-6791-4d47-a50d-679db5d511c9",
+  apiHost: "https://chatbot.nordaiagency.dk",
+
   theme: {
     button: {
-      backgroundColor: "#d97745",
+      backgroundColor: "#009ee3",
       right: 20,
       bottom: 20,
-      size: 48,
-      dragAndDrop: true,
+      size: 52,
+      dragAndDrop: false,
       iconColor: "white",
-      customIconSrc: "https://i.imgur.com/j84pYfN.png",
+      customIconSrc: "https://i.imgur.com/EfQPrhF.png",
       autoWindowOpen: {
         autoOpen: true,
-        openDelay: 2,
+        openDelay: 1,
         autoOpenOnMobile: false
       }
     },
 
     tooltip: {
       showTooltip: true,
-      tooltipMessage: "Hej 👋",
-      tooltipBackgroundColor: "black",
-      tooltipTextColor: "white",
-      tooltipFontSize: 16
+      tooltipMessage: "Hej 👋 Har du spørgsmål om SEO?",
+      tooltipBackgroundColor: "#111111",
+      tooltipTextColor: "#ffffff",
+      tooltipFontSize: 14
     },
-
-    disclaimer: {
-      title: "Bemærk",
-      message: "Ved at bruge chatbotten accepterer du vilkårene.",
-      textColor: "black",
-      buttonColor: "#d97745",
-      buttonText: "Start chat",
-      buttonTextColor: "white",
-      blurredBackgroundColor: "rgba(0, 0, 0, 0.4)",
-      backgroundColor: "white"
-    },
-
-    customCSS: ``,
 
     chatWindow: {
       showTitle: true,
       showAgentMessages: true,
-      title: "Cæsar Flytteservice",
-      titleAvatarSrc: "https://i.imgur.com/j84pYfN.png",
-      welcomeMessage: "Hej 👋 Hvordan kan jeg hjælpe dig med din flytning?",
-      errorMessage: "Der opstod en fejl. Prøv igen om et øjeblik.",
+      title: "Effecto",
+      titleAvatarSrc: "https://i.imgur.com/EfQPrhF.png",
+      welcomeMessage: "Hej 👋 Hvordan kan jeg hjælpe dig med SEO og vækst?",
+      errorMessage: "Der opstod en fejl. Prøv igen om lidt.",
       backgroundColor: "#ffffff",
-      backgroundImage: "",
-      height: 700,
-      width: 400,
-      fontSize: 16,
+      height: 520,
+      width: 350,
+      fontSize: 15,
+      renderHTML: true,
+      clearChatOnReload: false,
 
       starterPrompts: [
-        "Hvad koster 2 mænd og 1 varevogn?",
-        "Har I opbevaring?",
-        "Jeg vil gerne have et tilbud"
+        "Hvad kan I hjælpe med?",
+        "Kan I forbedre min SEO?",
+        "Jeg vil gerne høre mere"
       ],
 
-      starterPromptFontSize: 15,
-      clearChatOnReload: false,
-      sourceDocsTitle: "Kilder:",
-      renderHTML: true,
+      starterPromptFontSize: 14,
 
       botMessage: {
-        backgroundColor: "#f7f8ff",
+        backgroundColor: "#f5f7fa",
         textColor: "#303235",
         showAvatar: true,
-        avatarSrc: "https://i.imgur.com/j84pYfN.png"
+        avatarSrc: "https://i.imgur.com/EfQPrhF.png"
       },
 
       userMessage: {
-        backgroundColor: "#d97745",
+        backgroundColor: "#009ee3",
         textColor: "#ffffff",
-        showAvatar: true,
-        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png"
+        showAvatar: false
       },
 
       textInput: {
         placeholder: "Skriv dit spørgsmål...",
         backgroundColor: "#ffffff",
         textColor: "#303235",
-        sendButtonColor: "#d97745",
-        maxChars: 200,
+        sendButtonColor: "#009ee3",
+        maxChars: 300,
         maxCharsWarningMessage: "Din besked er for lang. Skriv lidt kortere.",
-        autoFocus: true,
-        sendMessageSound: true,
-        sendSoundLocation: "send_message.mp3",
-        receiveMessageSound: true,
-        receiveSoundLocation: "receive_message.mp3"
-      },
-
-      feedback: {
-        color: "#303235"
-      },
-
-      dateTimeToggle: {
-        date: true,
-        time: true
+        autoFocus: true
       },
 
       footer: {
